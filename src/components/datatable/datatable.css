@@ -10,7 +10,7 @@
     height: 400px;
     background-color: #fff;
     box-shadow: #d8d8d8 0px 5px 5px;
-    border-radius: 10px 0px;
+    border-radius: 7px;
     padding: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,18 +18,22 @@
     justify-items: center;
     align-items: center;
     grid-row-gap: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .data-column {
     display: grid;
-    background-color:rgb(241, 255, 202);
+    background-color:rgb(230, 255, 162);
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px rgb(218, 193, 82) solid;
+    border-top: 1px rgb(218, 193, 82) solid;
+    color: rgb(73, 54, 0);
 }
 
-.item {
+.data_main_head {
     width: 100%;
     height: 100%;
     display: flex;
@@ -37,25 +41,25 @@
     align-items: center;
 }
 
-.year {
-    border-radius: 10px 0px 0px 0px;
-    background-color: rgb(197, 255, 203);
-}
-
-.inLakhs {
+.data_sub_head {
     font-size: 0.7rem;
     width: 100%;
     text-align: center;
 }
 
-.dataTitleWrapper {
+.data_head_Wrapper {
     display: grid;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(197, 255, 203);
+    background-color: rgb(124, 255, 137);
     grid-column-gap: 5px;
+    border-radius: 0px 0px 0px 0px;
+    font-size: 1.15rem;
+    border-bottom: 1px rgb(102, 189, 102) solid;
+    border-top: 1px rgb(102, 189, 102) solid;
+    color: #333;
 }
 
 .loding {
