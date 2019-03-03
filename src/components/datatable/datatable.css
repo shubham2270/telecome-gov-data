@@ -1,0 +1,65 @@
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: #d8d8d8 0px 5px 5px;
+    border-radius: 10px 0px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 5px;
+}
+
+.data-column {
+    display: grid;
+    background-color:rgb(241, 255, 202);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year {
+    border-radius: 10px 0px 0px 0px;
+    background-color: rgb(197, 255, 203);
+}
+
+.inLakhs {
+    font-size: 0.7rem;
+    width: 100%;
+    text-align: center;
+}
+
+.dataTitleWrapper {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(197, 255, 203);
+    grid-column-gap: 5px;
+}
+
+.loding {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
