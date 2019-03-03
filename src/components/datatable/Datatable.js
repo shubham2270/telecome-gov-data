@@ -33,7 +33,7 @@ class Datatable extends Component {
       return (
         <div>
           <div className='wrapper'>
-              <div className='card'>
+              <div className='card datatable'>
                   <div className='data_head_Wrapper'>
                     <div className='data_main_head'>{year}</div>
                     <div className='data_sub_head'>{month}</div>

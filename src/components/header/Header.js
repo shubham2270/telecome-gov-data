@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Header() {
+function Header({className}) {
   return (
     <div>
-      <div style={headerStyle}><h1>Telecome Data</h1></div>
+      <div style={headerStyle} className='header'><h1>Telecome Data</h1></div>
     </div>
   )
 }
@@ -13,10 +13,11 @@ const headerStyle = {
     display: 'flex',
     width: '100%',
     height: '10vh',
-    backgroundColor: '#f4c33d',
-    color: '#333',
+    backgroundColor: '#7317d6',
+    color: '#fff',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    gridArea: 'header'
 }
 
 export default Header;

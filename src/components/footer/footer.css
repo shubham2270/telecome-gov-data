@@ -1,0 +1,16 @@
+
+.footerStyle {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    background-color: #333;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerStyle a {
+    text-decoration: none;
+    color: #ffeb7c;
+    padding-left: 10px;
+}

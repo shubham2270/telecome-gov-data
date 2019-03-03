@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 import Datatable from './components/datatable/Datatable';
+import SideMenu from './components/sideMenu/SideMenu';
 import './App.css';
 
 class App extends Component {
@@ -9,16 +11,28 @@ class App extends Component {
 
    
       return (
-        <div className="App">
-          <Header />
-          <Datatable 
-            year={'Year'} 
-            wired={'Wired'} 
-            wireless={'Wireless'} 
-            apiUrl={landline_vs_Mobile}
-            month={'Apr - Mar'}
-            lakhs={'(In Lakhs)'}
-            />
+        <div>
+          <div className='main_wrapper'>
+              <div className='header'>
+                <Header />
+              </div>
+             <div className='sidemenu'>
+                <SideMenu />
+             </div>
+              <div className='datatable'>
+                <Datatable 
+                  year={'Year'} 
+                  wired={'Wired'} 
+                  wireless={'Wireless'} 
+                  apiUrl={landline_vs_Mobile}
+                  month={'Apr - Mar'}
+                  lakhs={'(In Lakhs)'}
+                  />
+              </div>
+               <div className='footer'>
+                  <Footer />
+               </div>
+          </div>
         </div>
       );
     }
