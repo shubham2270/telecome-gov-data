@@ -3,7 +3,7 @@ import './buttonMenu.css';
 
 const sideMenuButton = (props) => {
     return (
-        <div className='menu_button'>{props.btnName} <div></div></div>
+        <div className='menu_button btn' style={props.alignStyle}>{props.btnName}</div>
     )
 }
 

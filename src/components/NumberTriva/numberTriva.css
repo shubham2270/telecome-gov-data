@@ -1,0 +1,27 @@
+.triva_container {
+    display: grid;
+    grid-template-rows: 40px 1fr 2fr;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1:nth-child(1) {
+    color: rgb(32, 32, 32);
+}
+
+h1:nth-child(2) {
+    color: purple;
+}
+
+.triva_text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: 100%;
+}

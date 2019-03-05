@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Datatable from './components/datatable/Datatable';
+import NumberTriva from './components/NumberTriva/NumberTriva';
 import SideMenu from './components/sideMenu/SideMenu';
 import About from './components/About/About';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -22,7 +23,6 @@ class App extends Component {
                 <SideMenu />
               </div>
               <div className='datatable'>
-                <Route path="/about" component={About} exact />
                 <Route path="/data" render={() => <Datatable 
                 year={'Year'} 
                 wired={'Wired'} 
@@ -32,6 +32,8 @@ class App extends Component {
                 lakhs={'(In Lakhs)'}
                 />} 
                 exact />
+                <Route path="/triva" component={NumberTriva} exact />
+                <Route path="/about" component={About} exact />
               </div>
               <div className='footer'>
                 <Footer />
