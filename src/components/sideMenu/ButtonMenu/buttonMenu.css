@@ -1,0 +1,30 @@
+.menu_button {
+    padding: 12px;
+    background-color: #7317D6;
+    color: #fff;
+    transform: skewX(-10deg);
+    margin-top: 5px;
+    font-size: 1.5rem;
+    width: 100px;
+    transition: all ease 300ms;
+    overflow: hidden;
+}
+
+.menu_button div {
+    width: 50px;
+    height: 200px;
+    background-color: yellow;
+    transform: rotateZ(30deg);
+    /* display: none; */
+    transform: translateX(-80px);
+    transition: all ease 300ms;
+}
+
+.menu_button:hover div {
+    /* display: block; */
+    transform: translateX(80px);
+}
+
+.menu_button:hover {
+    background-color: rgb(136, 43, 236);
+}

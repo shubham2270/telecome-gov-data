@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import HamburgerButton from './HamburgerButton/HamburgerButton';
 import { Link } from 'react-router-dom';
 import './sidemenu.css';
+import ButtonMenu from './ButtonMenu/ButtonMenu';
+
+
+
 
 class SideMenu extends Component {
     state = {
@@ -13,6 +17,8 @@ class SideMenu extends Component {
     slideOut = () => {
         this.state.status ? this.setState({translateX: 'translate(-300px)', status: false, toggleArrow: ''}) : this.setState({translateX: 'translate(0px)', status: true, toggleArrow: 'active'})
     }
+
+    
     
     render() {
         return (
@@ -21,9 +27,9 @@ class SideMenu extends Component {
         style={{transform: this.state.translateX}}>
             <HamburgerButton slideOut={this.slideOut} toggleArrow={this.state.toggleArrow}/>
             
-                <Link to="/about">About</Link>
-                <Link to="/data">Data</Link>
-                <Link to="/data2">Data2</Link>
+                <Link to="/about"><ButtonMenu btnName={'About'} /> </Link>
+                <Link to="/data"><ButtonMenu btnName={'Data'} /></Link>
+                <Link to="/data2"><ButtonMenu btnName={'Button 2'} /></Link>
             
         </div>
       </div>

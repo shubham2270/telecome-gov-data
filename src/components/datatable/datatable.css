@@ -1,13 +1,15 @@
 .wrapper {
     display: grid;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    grid-template-columns: 1fr 1fr;
 }
 
 .card {
+    box-sizing: border-box;
     width: 300px;
     height: 400px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: #2e2e2e 0px 0px 80px;
     border-radius: 7px;
     padding: 5px;
@@ -18,7 +20,8 @@
     align-items: center;
     grid-row-gap: 5px;
     font-family: 'Montserrat', sans-serif;
-    animation: cardAnimate 0.5s ease-in-out;
+    animation: cardAnimate 0.5s ease;
+    z-index: 1;
 }
 
 @keyframes cardAnimate {
@@ -72,5 +75,57 @@
 .loding {
     display: flex;
     justify-content: center;
-    background-color: red;
+}
+
+.card_moreinfo {
+    width: 250px;
+    height: 380px;
+    background-color: #fff;
+    justify-self: flex-end;
+    z-index: 1;
+    transition: all ease 500ms;
+    border-radius: 7px 0px 0px 7px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    line-height: 1.7rem;
+    animation:  cardSneak 0.7s ease 0.5s;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+@keyframes cardSneak {
+    0% { transform: translateX(230px) }
+    50% { transform: translateX(260px) }
+    100% { transform: translateX(230px) }
+}
+
+.card__moreinfo__toggleButton {
+    width: 20px;
+    background-color: rgb(216, 22, 112);
+    height: 100%;
+    border-radius: 7px 0px 0px 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card__moreinfo__toggleButton strong {
+    color: White;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card__moreinfo__text {
+    color: #333;
+    padding-left: 5px;
+}
+
+.card__moreinfo__text hr {
+    border: rgb(209, 209, 209) solid 0.5px;
 }

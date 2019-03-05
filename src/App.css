@@ -15,7 +15,7 @@ html, body {
 .main_wrapper {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   grid-template-rows: auto;
   grid-template-areas: 
     "header header"
