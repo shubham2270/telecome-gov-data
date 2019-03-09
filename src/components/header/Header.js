@@ -3,7 +3,7 @@ import React from 'react'
 function Header({className}) {
   return (
     <div>
-      <div style={headerStyle} className='header'><h1>Telecome Data</h1></div>
+      <div style={headerStyle} className='header'><h1>Number Fact & Figure</h1></div>
     </div>
   )
 }

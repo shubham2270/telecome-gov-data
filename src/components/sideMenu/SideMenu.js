@@ -12,11 +12,12 @@ class SideMenu extends Component {
         translateX: 'translateX(-400px)',
         status: false,
         toggleArrow: '',
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        animateHome: 'translateX(-300px)',
     }
 
     slideOut = () => {
-        this.state.status ? this.setState({translateX: 'translate(-400px)', status: false, toggleArrow: '', backgroundColor: 'transparent'}) 
+        this.state.status ? this.setState({translateX: 'translate(-400px)', status: false, toggleArrow: '', backgroundColor: 'transparent'})
         : this.setState({translateX: 'translate(0px)', status: true, toggleArrow: 'active', backgroundColor: 'rgb(216, 22, 112)'})
     }
 
@@ -27,14 +28,15 @@ class SideMenu extends Component {
       <div>
         <div className="menu_background sidemenu" 
         style={{transform: this.state.translateX, backgroundColor: this.state.backgroundColor}}>
-            <HamburgerButton slideOut={this.slideOut} toggleArrow={this.state.toggleArrow}/>
+            <HamburgerButton slideOut={this.slideOut} toggleArrow={this.state.toggleArrow} slideHome={this.state.animateHome}/>
             
-                <Link to="/data"><ButtonMenu btnName={'Data'} /></Link>
-                <Link to="/triva"><ButtonMenu btnName={'Number Trivia!'} alignStyle={{marginLeft: '-25px'}} /></Link>
-                <Link to="/about"><ButtonMenu btnName={'About'} alignStyle={{marginLeft: '-45px'}} /></Link>
-                <Link to="/data2"><ButtonMenu btnName={'Button 2'} alignStyle={{marginLeft: '-65px'}} /></Link>
+                <Link to="/"><ButtonMenu btnName={'Home!'} /></Link>
+                <Link to="/data"><ButtonMenu btnName={'Telephone Data'} alignStyle={{marginLeft: '-25px'}} /></Link>
+                <Link to="/triva"><ButtonMenu btnName={'Number Trivia!'} alignStyle={{marginLeft: '-45px'}} /></Link>
+                <Link to="/about"><ButtonMenu btnName={'About'} alignStyle={{marginLeft: '-65px'}} /></Link>
+                {/* <Link to="/data2"><ButtonMenu btnName={'Button 2'} alignStyle={{marginLeft: '-65px'}} /></Link>
                 <Link to="/data2"><ButtonMenu btnName={'Button 2'} alignStyle={{marginLeft: '-85px'}} /></Link>
-                <Link to="/data2"><ButtonMenu btnName={'Button 2'} alignStyle={{marginLeft: '-105px'}} /></Link>
+                <Link to="/data2"><ButtonMenu btnName={'Button 2'} alignStyle={{marginLeft: '-105px'}} /></Link> */}
             
         </div>
       </div>

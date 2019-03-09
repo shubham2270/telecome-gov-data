@@ -5,6 +5,7 @@ import Datatable from './components/datatable/Datatable';
 import NumberTriva from './components/NumberTriva/NumberTriva';
 import SideMenu from './components/sideMenu/SideMenu';
 import About from './components/About/About';
+import Home from './components/Home/Home';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 
@@ -32,6 +33,7 @@ class App extends Component {
                 lakhs={'(In Lakhs)'}
                 />} 
                 exact />
+                <Route path="/" component={Home} exact />
                 <Route path="/triva" component={NumberTriva} exact />
                 <Route path="/about" component={About} exact />
               </div>

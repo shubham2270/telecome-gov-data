@@ -13,17 +13,26 @@ class Datatable extends Component {
     }
   }
 
+  _isMounted = false;
+
   componentDidMount() {
+    this._isMounted = true;
     let APIUrl = this.props.apiUrl;
 
     fetch(APIUrl)
     .then(res => res.json())
     .then(data => {
-      this.setState({
-        isLoaded: true,
-        telecomeData: data.records,
-      })
+      if(this._isMounted) {
+        this.setState({
+          isLoaded: true,
+          telecomeData: data.records,
+        })
+      }
     })
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   toggleMoreInfo = () => {
