@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/telecome-gov-data/precache-manifest.71552cf1b7386941cfd5c9eeb52031b9.js"
+  "/telecome-gov-data/precache-manifest.89f5e6cb8c4fd88bf9c33991c06015a7.js"
 );
 
 workbox.clientsClaim();
