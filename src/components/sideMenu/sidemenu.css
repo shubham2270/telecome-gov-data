@@ -1,0 +1,19 @@
+
+.menu_background {
+    width: 35vw;
+    height: 82vh;
+    grid-area: sidemenu;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+    transition: all ease 400ms;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.menu_background a {
+    text-decoration: none;
+    color: white;
+}
