@@ -15,7 +15,7 @@ const About = () => {
              <br/><br/>
         </p>
         <p>
-            Number Trivia data is fetched from numbersapi.com which shows random number trivia on clicking
+            Number Trivia data is fetched from rapidapi.com which shows random number trivia on clicking
             'Get Random Trivia' button, you can also get trivia based on your number you can enter in number field.
 
         </p>

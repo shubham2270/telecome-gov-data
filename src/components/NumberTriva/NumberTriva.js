@@ -4,13 +4,24 @@ import './numberTriva.css';
 class NumberTriva extends Component {
     state = {
         triva: {},
-        number: 80,
+        number: 20,
     }
 
     _isMounted = false;
 
+    
+
         fetchRandomTriva = () => {
-            fetch('http://numbersapi.com/random/trivia?json')
+
+            let key = '577b4bfeb5msh0d1cb895f7e2e95p104d1cjsnfa0481691719';
+            const options = {
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+                'X-RapidAPI-Key': key
+            },
+            }
+
+            fetch('https://numbersapi.p.rapidapi.com/random/trivia?max=20&fragment=false&min=10&json=true', options)
             .then(res => res.json())
            
             .then(triva => {
@@ -26,7 +37,16 @@ class NumberTriva extends Component {
         }
 
         fetchYourTriva = () => {
-            fetch(`http://numbersapi.com/${this.state.number}/trivia?json`)
+
+            let key = '577b4bfeb5msh0d1cb895f7e2e95p104d1cjsnfa0481691719';
+            const options = {
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+                'X-RapidAPI-Key': key
+            },
+            }
+
+            fetch(`https://numbersapi.p.rapidapi.com/${this.state.number}/trivia?fragment=true&notfound=floor&json=true`, options)
             .then(res => res.json())
             .then(triva => {
               if(this._isMounted) {
